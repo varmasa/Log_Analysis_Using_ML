@@ -13,32 +13,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v4
         with:
-          python-version: "3.11"
-
-      - name: Install dependencies
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          
+      - name: Build Docker Image
         run: |
-          pip install -r requriements.txt
-
-      - name: Generate dataset
+            docker build -t saivarma5557/logapp:v1 .
+            docker images
+      
+      - name: Push it to DockerHub
         run: |
-          python3 data_generation.py
-
-      - name: Train models
-        run: |
-          python3 train1_for_category.py
-          python3 train2_for_severity.py
-          python3 train3_for_rootcause.py
-
-      - name: Run Flask (background)
-        run: |
-          python3 predict_result.py
-          python3 app.py &
-          echo $! > flask.pid
-          sleep 10
-
-      - name: Stop Flask app
-        run: |
-          kill $(cat flask.pid)
+            docker push saivarma5557/logapp:v1
+            
+             
+          
