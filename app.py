@@ -12,13 +12,13 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 # ==========================
 # LOAD MODELS
 # ==========================
-category_model = joblib.load("models/category_model.pkl")
-severity_model = joblib.load("models/severity_model.pkl")
-rootcause_model = joblib.load("models/rootcause_model.pkl")
+category_model = joblib.load("category_model.pkl")
+severity_model = joblib.load("severity_model.pkl")
+rootcause_model = joblib.load("rootcause_model.pkl")
 
-tfidf_category = joblib.load("models/tfidf.pkl")
-tfidf_severity = joblib.load("models/tfidf_severity.pkl")
-tfidf_rootcause = joblib.load("models/tfidf_rootcause.pkl")
+tfidf_category = joblib.load("tfidf.pkl")
+tfidf_severity = joblib.load("tfidf_severity.pkl")
+tfidf_rootcause = joblib.load("tfidf_rootcause.pkl")
 
 rootcause_encoder = joblib.load(
     "models/rootcause_encoder.pkl"
