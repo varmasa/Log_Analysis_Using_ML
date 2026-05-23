@@ -18,5 +18,4 @@ RUN python3 data_generation.py && \
     python3 predict_result.py
 
 EXPOSE 5000
-
 CMD [ "python3", "app.py" ]
