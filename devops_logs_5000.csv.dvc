@@ -1,0 +1,5 @@
+outs:
+- md5: 4539b46d47829037da071263884efcef
+  size: 508009
+  hash: md5
+  path: devops_logs_5000.csv
