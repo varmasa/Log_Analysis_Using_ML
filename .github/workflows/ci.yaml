@@ -1,0 +1,39 @@
+---
+name: CI For ML Model
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requriements.txt
+
+      - name: Generate dataset
+        run: |
+          python3 data_generation.py
+        
+      - name: Train models
+        run: |
+          python3 train1_for_category.py
+          python3 train2_for_severity.py
+          python3 train3_for_rootcause.py
+
+      - name: predict & expose
+        run: |
+          python3 predict_result.py
+          python3 app.py
