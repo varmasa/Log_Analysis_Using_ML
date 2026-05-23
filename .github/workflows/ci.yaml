@@ -16,29 +16,29 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.14"
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
-          pip install -r requriements.txt
+          pip install -r requirements.txt
 
       - name: Generate dataset
         run: |
           python3 data_generation.py
-        
+
       - name: Train models
         run: |
           python3 train1_for_category.py
           python3 train2_for_severity.py
           python3 train3_for_rootcause.py
 
-      - name: predict & expose
+      - name: Run Flask (background)
         run: |
           python3 predict_result.py
-          python3 app.py
+          python3 app.py &
           echo $! > flask.pid
           sleep 10
 
-       - name: Stop Flask app
-         run: |
+      - name: Stop Flask app
+        run: |
           kill $(cat flask.pid)
