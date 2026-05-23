@@ -37,3 +37,9 @@ jobs:
         run: |
           python3 predict_result.py
           python3 app.py
+          echo $! > flask.pid
+          sleep 10
+
+       - name: Stop Flask app
+         run: |
+          kill $(cat flask.pid)
