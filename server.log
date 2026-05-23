@@ -1,0 +1,58 @@
+2026-05-24 09:10:11 INFO Application started successfully
+
+2026-05-24 09:11:15 ERROR ORA-12541: TNS no listener
+2026-05-24 09:11:16 ERROR Database connection timeout
+2026-05-24 09:11:17 WARN JDBC connection pool exhausted
+
+2026-05-24 09:13:20 ERROR Jenkins build failed
+2026-05-24 09:13:21 ERROR Git authentication denied
+2026-05-24 09:13:25 WARN Maven dependency resolution failed
+
+2026-05-24 09:15:32 WARN Pod memory exceeded threshold
+2026-05-24 09:15:33 ERROR Pod CrashLoopBackOff
+2026-05-24 09:15:35 ERROR Container terminated with exit code 137
+2026-05-24 09:15:36 ERROR OOMKilled detected
+
+2026-05-24 09:18:41 ERROR Failed to pull Docker image
+2026-05-24 09:18:42 ERROR Docker registry authentication failed
+2026-05-24 09:18:43 WARN Container health check failed
+
+2026-05-24 09:20:50 ERROR EC2 instance failed status check
+2026-05-24 09:20:51 WARN ALB target unhealthy
+2026-05-24 09:20:52 ERROR IAM access denied for S3 bucket
+
+2026-05-24 09:22:10 ERROR Prometheus target down
+2026-05-24 09:22:12 WARN Grafana datasource unavailable
+2026-05-24 09:22:13 ERROR Alertmanager notification failed
+
+2026-05-24 09:25:20 ERROR Disk usage exceeded 95 percent
+2026-05-24 09:25:22 WARN System load average too high
+2026-05-24 09:25:25 ERROR SSH connection timeout
+
+2026-05-24 09:28:15 ERROR DNS lookup failed
+2026-05-24 09:28:16 WARN Packet loss above threshold
+2026-05-24 09:28:18 ERROR SSL handshake failed
+
+2026-05-24 09:30:50 ERROR Kubernetes node entered NotReady state
+2026-05-24 09:30:51 WARN Failed scheduling pod due to insufficient memory
+2026-05-24 09:30:53 ERROR Helm deployment failed
+
+2026-05-24 09:33:20 ERROR Lambda function timeout
+2026-05-24 09:33:21 WARN CloudWatch agent stopped reporting
+2026-05-24 09:33:22 ERROR RDS connection timeout
+
+2026-05-24 09:35:40 ERROR Permission denied while executing shell script
+2026-05-24 09:35:41 WARN Cron job execution failed
+2026-05-24 09:35:42 ERROR Kernel panic detected
+
+2026-05-24 09:38:55 ERROR Git push rejected
+2026-05-24 09:38:56 WARN Merge conflict detected
+2026-05-24 09:38:58 ERROR Branch protection rule violated
+
+2026-05-24 09:40:15 ERROR JVM heap memory exceeded
+2026-05-24 09:40:16 WARN Garbage collection overhead limit exceeded
+2026-05-24 09:40:17 ERROR Thread deadlock detected
+
+2026-05-24 09:43:10 ERROR VPN tunnel disconnected
+2026-05-24 09:43:12 WARN Firewall blocked outgoing traffic
+2026-05-24 09:43:14 ERROR Connection reset by peer
