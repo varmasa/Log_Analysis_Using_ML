@@ -21,7 +21,7 @@ tfidf_severity = joblib.load("tfidf_severity.pkl")
 tfidf_rootcause = joblib.load("tfidf_rootcause.pkl")
 
 rootcause_encoder = joblib.load(
-    "models/rootcause_encoder.pkl"
+    "rootcause_encoder.pkl"
 )
 
 # dataset for fix mapping
