@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: logapp-container
-        image: saivarma5557/logapp:175f75b
+        image: saivarma5557/logapp:222dcd2
         ports:
         - containerPort: 7008
