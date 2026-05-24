@@ -52,7 +52,7 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-          git add k8sfiles/deployment.yaml
+          git add k8s_files/deployment.yaml
 
           git commit -m "Update image tag to $IMAGE_TAG" || echo "No changes to commit"
 
