@@ -41,11 +41,11 @@ jobs:
 
       - name: Update Kubernetes deployment file
         run: |
-          sed -i "s|image: .*|image: $IMAGE_NAME:$IMAGE_TAG|g" k8sfiles/deployment.yaml
+          sed -i "s|image: .*|image: $IMAGE_NAME:$IMAGE_TAG|g" k8s_files/deployment.yaml
 
       - name: Show updated deployment file
         run: |
-          cat k8sfiles/deployment.yaml
+          cat k8s_files/deployment.yaml
 
       - name: Commit updated deployment file
         run: |
