@@ -17,5 +17,5 @@ RUN python3 data_generation.py && \
     python3 train3_for_rootcause.py && \
     python3 predict_result.py
 
-EXPOSE 5000
-CMD [ "python3", "app.py" ]
+EXPOSE 7008
+CMD ["gunicorn", "--preload", "-w", "2", "-k", "gthread", "--threads", "4", "-b", "0.0.0.0:7008", "wsgi:app"]
